@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+{% block title %} Login {% endblock %}
+
+{%  block body %}
+<link rel="stylesheet" href="../static/css/login.css">
+<div class="loginbox">
+  <img src="../static/img/logo.png" alt="" class="avatar">
+  <h1 class="logintitulo">ARRIVAL MANAGEMENT</h1>
+  <br><br>
+  <form action="">
+    <div class="form__div">
+      <input type="text" class="form__input" placeholder=" " required>
+      <label for="" class="form__label">Usuario</label>
+    </div>
+    <div class="form__div">
+      <input type="password" class="form__input" placeholder=" " required>
+      <label for="" class="form__label">Contraseña</label>
+    </div>
+    <center>
+    <button type="button" class="botones animacion color-animacion">
+      <i><ion-icon name="log-in"></ion-icon></i>
+      <span class="tex-icono">
+          Login
+      </span>
+    </button>
+  </center>
+
+  </form>
+</div>
+
+{% endblock %}
