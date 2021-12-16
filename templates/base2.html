@@ -1,1 +1,108 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"  href="{{ url_for('static',filename='img/logo.png') }}" type="image/x-icon">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/navegacion2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estructura2.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/69f1400361a215519d385199118a34aa?family=Harabara" rel="stylesheet" type="text/css"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <nav class="nav-main">
+        <!--BTN-->
+        <input type="checkbox" class="nav-main__btn-collapse" id="nav-main__checkbox">
+        <label for="nav-main__checkbox" class="nav-main__btn-collapse-icon">
+            <span class="icon-nav"></span>
+            <span class="icon-nav"></span>
+            <span class="icon-nav"></span>
+        </label>
+        <!--Logo-->
+        <a href="/" class="enlace">
+            <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.0/mercadolibre/favicon.svg" alt="" class="logo">
+            <h1 class="text_logo"><b>mercado libre</b></h1>
+            
+        </a>
+        
+        <!--Box red-->
+        <div class="nav-main__btn-collapse-bg"></div>
+        <!--social networks-->
+        <div class="social-networks">
+            <!--WA-->
+            <a href="#" target="_blank" class="social-networks__link-item">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <!--EM-->
+            <a href="#" target="_blank" class="social-networks__link-item">
+                <i class="fas fa-at"></i>
+            </a>
+            <!--LK-->
+            <a href="#" target="_blank" class="social-networks__link-item">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!--FB-->
+            <a href="#" target="_blank" class="social-networks__link-item">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <!--MENU-->
+        <div class="nav-main__menu">
+            <div class="btn_nav"></div>
+            <a href="#" class="nav-main__link-item">
+                <i class="fas fa-truck"></i>
+                Patio
+            </a>
+            <a href="#" class="nav-main__link-item">
+                <i class="fas fa-folder-open"></i>
+                Recepción
+            </a>
+            <a href="#" class="nav-main__link-item">
+                <i class="fas fa-truck-loading"></i>
+                Recibo
+            </a>
+            <a href="#" class="nav-main__link-item">
+                <i class="fas fa-chart-bar"></i>
+                Reportes
+            </a>
+            <a href="#" class="nav-main__link-item">
+                <i class="fas fa-edit"></i>
+                Ediciones
+            </a>
+        </div>
+        <!--Sites-->
+        <div class="sites">
+            <a href="#" class="sites_button">
+                Estás viendo: <b>MXCD01</b> <i class="fas fa-angle-right" style="color: #3287f4;"></i>
+            </a>
+            <label class="vertical"> | </label>
+            <a href="#" class="user">
+                <svg  width="20" height="20" viewBox="0 0 40 40" class="user2">
+                    <path fill-rule="evenodd" d="M20 0c11.046 0 20 8.954 20 20s-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0zm0 1.5C9.783 1.5 1.5 9.783 1.5 
+                    20S9.783 38.5 20 38.5 38.5 30.217 38.5 20 30.217 1.5 20 1.5zm-6.75 22.75H26l.001.072c1.71.34 2.999 1.849 2.999 
+                    3.658v.75h-1.5v-.75c0-1.231-.999-2.23-2.23-2.23H13.98c-1.178 0-2.143.914-2.224 2.071l-.006.16v.75h-1.5v-.75c0-1.81 1.29-3.32 3-3.66v-.071zm6.749-15.002c3.728 
+                    0 6.751 3.023 6.751 6.751s-3.023 6.751-6.751 6.751-6.751-3.023-6.751-6.751 3.023-6.751 6.751-6.751zm0 1.5c-2.9 0-5.251 2.351-5.251 5.251 0 2.9 2.351 5.251 5.251 
+                    5.251 2.9 0 5.251-2.351 5.251-5.251 0-2.9-2.351-5.251-5.251-5.251z">
+                    </path>
+                    <i class="fas fa-angle-down"></i>
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <div class="contenedor">
+        <div class="contenedor2">
+        {% block contenedor2 %} 
+        {% endblock %}
+        </div>
+        <div class="contenedor3">
+        {% block contenedor3 %} 
+            
+        {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

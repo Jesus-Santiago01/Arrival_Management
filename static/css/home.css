@@ -1,0 +1,45 @@
+.item-circle {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;        
+}
+.welcome .item-circle-info i{
+    font-size: 3vh;
+
+}
+.item-circle-info {
+    background: #fff159;
+    -webkit-border-radius: 69px;
+    border-radius: 69px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    height: 69px;
+    padding: 21px;
+    width: 69px;  
+    margin: auto;
+    
+}
+.welcome .user_login{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family:Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 20px;
+}
+.welcome{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
