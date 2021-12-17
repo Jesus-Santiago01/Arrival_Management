@@ -13,6 +13,7 @@
 }
 .process{
     margin-top: 20px;
+    padding: 10px;
 }
 .process .item-circle i{
     color: #000;
@@ -57,4 +58,15 @@
     justify-content: center;
     text-align: center;
     margin: auto;
+}
+.process .button_process{
+    border: 0;
+    background: none;
+    border-radius: 10%;
+}
+.process .button_process:hover{
+    background: #e6e6e6;
+}
+.process .button_process:hover{
+    background: #e6e6e6;
 }
