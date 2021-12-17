@@ -9,10 +9,13 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/navegacion2.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/estructura2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/select.css') }}">
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/69f1400361a215519d385199118a34aa?family=Harabara" rel="stylesheet" type="text/css"/>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../static/js/select.js"></script>
 </head>
 <body>
     <nav class="nav-main">
@@ -69,7 +72,7 @@
         </div>
         <!--Sites-->
         <div class="sites">
-            <a href="#" class="sites_button">
+            <a href="javascript:ventana_sites()" class="sites_button">
                 Estás viendo: <b>MXCD01</b> <i class="fas fa-angle-right" style="color: #3287f4;"></i>
             </a>
             <label class="vertical"> | </label>
@@ -86,6 +89,29 @@
             </a>
         </div>
     </nav>
+        <div class="ventana_sites" id="ventana_sites">
+            <div class="contenido_sites">
+                <b>¿Qué quieres ver?</b>
+                <br><br>    
+                <b>sites:</b>
+                <div class="box_select">
+                    
+                    <select>
+                        <option>MXCD01</option>
+                        <option>MXCD02</option>
+                        <option>MXCD03</option>
+                        <option>MXCD04</option>
+                    </select>
+                    <i class="fas fa-angle-double-down"></i>
+                </div>
+                <div id="cerrar_sites">
+                    <a class="Boton_cerrar" href="javascript:cerrar_sites()" >
+                        <i class="fas fa-times" style="color: #3287f4;"></i>
+                    </a>
+                </div>
+                <br><br>  
+            </div>
+        </div>
     <div class="contenedor">
         <div class="contenedor2">
             <div class="welcome">
@@ -103,3 +129,11 @@
     </div>
 </body>
 </html>
+<script>
+    function ventana_sites(){
+        document.getElementById("ventana_sites").style.display="block";
+    }
+    function cerrar_sites(){
+        document.getElementById("ventana_sites").style.display="none";
+    }
+</script>

@@ -39,8 +39,6 @@
     text-decoration: none;
     color: inherit;
 }
-.user{
-}
 .user .user2 .fas fa-angle-down{
     margin-bottom: 10px;
 }
@@ -172,4 +170,34 @@
     to{
         opacity: 1;
     }
+}
+.ventana_sites{
+    background-color: #fff;
+    width: 60%;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    padding: 33px;
+    min-height: 300px;
+    border-radius: 5px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    display: none;
+    box-shadow: 0 10px 10px #0d0e2346;
+    align-items: center;
+}
+.ventana_sites .contenido_sites{
+    text-align: center;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+.ventana_sites .cerrar_sites .Boton_cerrar{
+    border: 0;
+    background: none;
+}
+#cerrar_sites{
+    position: absolute;
+    right: 30px;
+    top:30px;
 }
