@@ -13,9 +13,15 @@ def principal():
 @app.route('/login')
 def login():
     return render_template('login.html')
-@app.route('/home')
-def home():
-    return render_template('home.html')
+@app.route('/process')
+def process():
+    return render_template('process.html')
+@app.route('/reports')
+def reports():
+    return render_template('reportes.html')
+@app.route('/admin')
+def admin():
+    return render_template('administrador.html')
 
 
 

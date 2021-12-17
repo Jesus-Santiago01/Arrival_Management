@@ -24,7 +24,7 @@
             <span class="icon-nav"></span>
         </label>
         <!--Logo-->
-        <a href="/" class="enlace">
+        <a href="/process" class="enlace">
             <img src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.10.0/mercadolibre/favicon.svg" alt="" class="logo">
             <h1 class="text_logo"><b>mercado libre</b></h1>
             
@@ -35,34 +35,34 @@
         <!--social networks-->
         <div class="social-networks">
             <!--WA-->
-            <a href="#" target="_blank" class="social-networks__link-item">
+            <a href="https://wa.me/525558086776" target="_blank" class="social-networks__link-item">
                 <i class="fab fa-whatsapp"></i>
             </a>
             <!--EM-->
-            <a href="#" target="_blank" class="social-networks__link-item">
+            <a href="mailto:jesus.santiago@mercadolibre.com.mx" target="_blank" class="social-networks__link-item">
                 <i class="fas fa-at"></i>
             </a>
             <!--LK-->
-            <a href="#" target="_blank" class="social-networks__link-item">
+            <a href="https://www.linkedin.com/in/jesus-alberto-santiago-trejo-0b81b621a" target="_blank" class="social-networks__link-item">
                 <i class="fab fa-linkedin-in"></i>
             </a>
             <!--FB-->
-            <a href="#" target="_blank" class="social-networks__link-item">
+            <a href="https://www.facebook.com/puma.santi" target="_blank" class="social-networks__link-item">
                 <i class="fab fa-facebook-f"></i>
             </a>
         </div>
         <!--MENU-->
         <div class="nav-main__menu">
             <div class="btn_nav"></div>
-            <a href="#" class="nav-main__link-item">
+            <a href="{{url_for('process')}}" class="nav-main__link-item">
                 <i class="fas fa-boxes"></i>
                 Procesos
             </a>
-            <a href="#" class="nav-main__link-item">
+            <a href="{{url_for('reports')}}"class="nav-main__link-item">
                 <i class="fas fa-chart-bar"></i>
                 Reportes
             </a>
-            <a href="#" class="nav-main__link-item">
+            <a href="{{url_for('admin')}}" class="nav-main__link-item">
                 <i class="fas fa-user-shield"></i>
                 Administrador
             </a>
