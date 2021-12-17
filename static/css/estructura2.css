@@ -41,7 +41,6 @@ body {
     display: -moz-box;
     display: -ms-flexbox;
     justify-content: center;
-    align-items: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
