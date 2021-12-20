@@ -3,7 +3,7 @@
 .loginbox {
   border: 2px solid yellow;
   width: 1200px;
-    height: 700px;
+  height: 750px;
   background: transparent;
   background-size: cover;
   -moz-background-size: cover;
@@ -29,6 +29,7 @@
   position: absolute;
   top: -10%;
   left: calc(50% - 6%);
+  border: 2px solid #fff;
 }
 .avatar:hover {
   
@@ -293,4 +294,16 @@
       transform: translateX(0); 
       opacity: 1;
   }
+}
+#cerrar_registro{
+  position: absolute;
+  right: 70px;
+  top:50px;
+  font-size: 30px;
+}
+#cerrar_registro i{
+  color: #fffb02;
+}
+.ventana_registro{
+  display: none;
 }

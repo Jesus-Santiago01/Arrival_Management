@@ -9,7 +9,7 @@
     <title>{% block title %} {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/navegacion2.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/estructura2.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/estilos.css') }}">
     <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtV1RW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link href="//db.onlinewebfonts.com/c/69f1400361a215519d385199118a34aa?family=Harabara" rel="stylesheet" type="text/css"/>
@@ -84,7 +84,7 @@
                     0 6.751 3.023 6.751 6.751s-3.023 6.751-6.751 6.751-6.751-3.023-6.751-6.751 3.023-6.751 6.751-6.751zm0 1.5c-2.9 0-5.251 2.351-5.251 5.251 0 2.9 2.351 5.251 5.251 
                     5.251 2.9 0 5.251-2.351 5.251-5.251 0-2.9-2.351-5.251-5.251-5.251z">
                     </path>
-                    <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-sign-out-alt"></i>
                 </svg>
             </a>
         </div>
@@ -103,6 +103,8 @@
                         <option>MXCD04</option>
                     </select>
                 </div>
+                <br><br>
+                <button class="botones_1">Aceptar</button>
                 <div id="cerrar_sites">
                     <a class="Boton_cerrar" href="javascript:cerrar_sites()" >
                         <i class="fas fa-times" style="color: #3287f4;"></i>

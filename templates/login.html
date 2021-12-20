@@ -3,29 +3,102 @@
 
 {%  block body %}
 <link rel="stylesheet" href="../static/css/login.css">
-<div class="loginbox">
-  <img src="../static/img/logo.png" alt="" class="avatar">
-  <h1 class="logintitulo">ARRIVAL MANAGEMENT</h1>
-  <br><br>
-  <form action="">
-    <div class="form__div">
-      <input type="text" class="form__input" placeholder=" " required>
-      <label for="" class="form__label">Usuario</label>
-    </div>
-    <div class="form__div">
-      <input type="password" class="form__input" placeholder=" " required>
-      <label for="" class="form__label">Contraseña</label>
-    </div>
-    <center>
-    <button type="button" class="botones animacion color-animacion">
-      <i><ion-icon name="log-in"></ion-icon></i>
-      <span class="tex-icono">
-          Login
-      </span>
-    </button>
-  </center>
+<link rel="stylesheet" href="../static/css/estilos.css">
+<div class="ventana_login" id="ventana_login">
+  <div class="loginbox">
+    <img src="../static/img/logo.png" alt="" class="avatar">
+    <h1 class="logintitulo">ARRIVAL MANAGEMENT</h1>
+    <br><br>
+    <form action="">
+      <div class="form__div">
+        <input type="text" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Usuario</label>
+      </div>
+      <div class="form__div">
+        <input type="password" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Contraseña</label>
+      </div>
+      <center>
+      <button type="button" class="botones animacion color-animacion">
+        <i><ion-icon name="log-in"></ion-icon></i>
+        <span class="tex-icono">
+            Login
+        </span>
+      </button>
+      <br><br>
+      <br><br>
+      <br><br>
+      <a href="javascript:ventana_registro()" style="text-decoration: underline; color: #fff; font-size: 20px;">Registrate</a>
+    </center>
 
-  </form>
+    </form>
+  </div>
 </div>
 
+<div class="ventana_registro" id="ventana_registro">
+  <div class="loginbox">
+    <img src="../static/img/logo.png" alt="" class="avatar">
+    <h1 class="logintitulo">ARRIVAL MANAGEMENT</h1>
+    <div id="cerrar_registro">
+      <a class="Boton_cerrar" href="javascript:cerrar_registro()" >
+          <i class="fas fa-times"></i>
+      </a>
+    </div>
+    <form action="/add_user" method="POST">
+      <div class="form__div">
+        <input type="text" name="nombre" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Nombre(s)</label>
+      </div>
+      <div class="form__div">
+        <input type="text" name="apaterno" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Apellido Paterno</label>
+      </div>
+      <div class="form__div">
+        <input type="text" name="amaterno" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Apellido Materno</label>
+      </div>
+      
+      <h3>Turno</h3>
+      <br><br>
+      <div class="box_select" style="position: relative;;">
+        <select name="turno" style="width: 100%; background-color: #000; border: 1px solid #fffb02; border-radius: 10px;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">Mixto</option>
+            <option value="5">Titanes</option>
+        </select>
+      </div>
+      <div class="form__div">
+        <input type="text" name="usuario" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Usuario</label>
+      </div>
+      <div class="form__div">
+        <input type="password" name="contraseña" class="form__input" placeholder=" " required autocomplete="off">
+        <label for="" class="form__label">Contraseña</label>
+      </div>
+      <center>
+      <button type="submit" class="botones animacion color-animacion">
+        <i><ion-icon name="log-in"></ion-icon></i>
+        <span class="tex-icono">
+            Registrarme
+        </span>
+      </button>
+    </center>
+
+    </form>
+  </div>
+</div>
+
+<script>
+  function ventana_registro(){
+      document.getElementById("ventana_registro").style.display="block";
+      document.getElementById("ventana_login").style.display="none";
+
+  }
+  function cerrar_registro(){
+      document.getElementById("ventana_registro").style.display="none";
+      document.getElementById("ventana_login").style.display="block";
+  }
+</script>
 {% endblock %}
