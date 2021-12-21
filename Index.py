@@ -39,6 +39,7 @@ def admin():
 #METODO PARA REGISTRO DE USUARIOS
 @app.route('/add_user' , methods=['POST'])
 def add_user():
+
     if request.method == 'POST':
         nombre = request.form['nombre']
         apaterno = request.form['apaterno']
@@ -51,6 +52,12 @@ def add_user():
         (nombre,apaterno,amaterno,turno,usuario,contraseña))
         mysql.connection.commit()
         return 'recived'
+
+    cur = mysql.connection.cursor()
+    cur.excecute('SELECT * FROM turnos')
+    turno = cur.fetchall()
+
+    cur.close()
 
 
 if __name__ == '__main__':
