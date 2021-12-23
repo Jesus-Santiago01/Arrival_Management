@@ -2,11 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL, MySQLdb
 
 app = Flask(__name__)
-app.config['MYSQL_HOST']='localhost'
-app.config['MYSQL_USER']='root'
-app.config['MYSQL_PASSWORD']=''
-app.config['MYSQL_DB']='arrival_management'
-mysql = MySQL(app)
+conn = MySQLdb.connect(host="127.0.0.1",user="root",password="",db="arrival_management")
 #MUESTA LA BASE
 @app.route('/base')
 def base():
@@ -41,24 +37,31 @@ def admin():
 def add_user():
 
     if request.method == 'POST':
-        nombre = request.form['nombre']
-        apaterno = request.form['apaterno']
-        amaterno = request.form['amaterno']
+        nombre = str(request.form['nombre'])
+        apaterno = str(request.form['apaterno'])
+        amaterno = str(request.form['amaterno'])
         turno = request.form['turno']
-        usuario = request.form['usuario']
-        contraseña = request.form['contraseña']
-        cur = mysql.connection.cursor()
-        cur.execute('INSERT INTO usuarios (nombre,apaterno,amaterno,turno,usuario,contraseña) VALUES (%s,%s,%s,%s,%s,%s)', 
-        (nombre,apaterno,amaterno,turno,usuario,contraseña))
-        mysql.connection.commit()
-        return 'recived'
+        usuario = str(request.form['usuario'])
+        contraseña = str(request.form['contraseña'])
 
-    cur = mysql.connection.cursor()
-    cur.excecute('SELECT * FROM turnos')
-    turno = cur.fetchall()
+        cursor = conn.cursor()
 
-    cur.close()
+        cursor.execute("INSERT INTO usuarios (nombre,apaterno,amaterno,turno,usuario,contraseña) VALUES (%s,%s,%s,%s,%s,%s)",(nombre,apaterno,amaterno,turno,usuario,contraseña))
 
+        conn.commit()
+        return redirect(url_for("login"))
+
+#METODO PARA VALIDACION DE USUARIOS EN BD
+@app.route('/check_user' , methods=['POST'])
+def check_user():
+    if request.method == 'POST':
+        usuario = str(request.form['usuario'])
+        contraseña = str(request.form['contraseña'])
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM usuarios WHERE usuario='"+usuario+"'")
+        user = cursor.fetchone()
+        print(user)
+        return "valido"
 
 if __name__ == '__main__':
     app.run(debug=True)

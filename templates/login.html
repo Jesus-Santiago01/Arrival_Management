@@ -9,17 +9,17 @@
     <img src="../static/img/logo.png" alt="" class="avatar">
     <h1 class="logintitulo">ARRIVAL MANAGEMENT</h1>
     <br><br>
-    <form action="">
+    <form action="/check_user" method="POST">
       <div class="form__div">
-        <input type="text" class="form__input" placeholder=" " required autocomplete="off">
+        <input type="text" name="usuario" class="form__input" placeholder=" " required autocomplete="off">
         <label for="" class="form__label">Usuario</label>
       </div>
       <div class="form__div">
-        <input type="password" class="form__input" placeholder=" " required autocomplete="off">
+        <input type="password" name="contraseña" class="form__input" placeholder=" " required autocomplete="off">
         <label for="" class="form__label">Contraseña</label>
       </div>
       <center>
-      <button type="button" class="botones animacion color-animacion">
+      <button type="submit" class="botones animacion color-animacion">
         <i><ion-icon name="log-in"></ion-icon></i>
         <span class="tex-icono">
             Login
@@ -62,9 +62,11 @@
       <br><br>
       <div class="box_select" style="position: relative;;">
         <select name="turno" style="width: 100%; background-color: #000; border: 1px solid #fffb02; border-radius: 10px;">
-          {% for tip in turno %}
-          <option value="{{ tip.id }}">{{ tip.turno }}</option>
-          {% endfor %}
+          <option value="1">1RO</option>
+          <option value="2">2DO</option>
+          <option value="3">3RO</option>
+          <option value="4">Mixto</option>
+          <option value="5">Titanes</option>
         </select>
       </div>
       <div class="form__div">
